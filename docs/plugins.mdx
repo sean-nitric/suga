@@ -1,0 +1,42 @@
+---
+title: Introduction
+description: Official Suga plugins for cloud infrastructure components
+---
+
+Suga provides official plugins for deploying infrastructure across multiple cloud providers. These plugins abstract the complexity of cloud-specific APIs while maintaining the flexibility to customize deployments.
+
+## Official Plugins
+
+<CardGroup cols={3}>
+  <Card title="AWS" icon="aws" href="/plugins/aws">
+    Amazon Web Services plugins for compute, storage, networking, and more
+  </Card>
+  <Card title="GCP" icon="google" href="/plugins/gcp">
+    Google Cloud Platform plugins for serverless containers, storage, and CDN
+  </Card>
+  <Card title="Neon" icon="database" href="/plugins/neon">
+    Serverless PostgreSQL database with branching and autoscaling
+  </Card>
+</CardGroup>
+
+## How it Works
+
+1. **Configure plugins** using the Suga editor:
+
+   ```bash
+   suga edit
+   ```
+
+2. **Drag components** into your platform and configure their parameters using this reference
+
+<Info>
+Official plugins come with sensible defaults, so customization is optional.
+</Info>
+
+## Referencing Plugin Outputs
+
+Plugins can reference outputs from other plugins using template syntax: 
+
+**Example:** 
+- `${infra.my-vpc.public_subnets}`
+- `${databases.main.connection_string}`
